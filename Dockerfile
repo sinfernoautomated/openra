@@ -3,7 +3,7 @@ MAINTAINER Soul Inferno <gamingtiger@gmx-topmail.de>
 
 ENV TZ="/usr/share/zoneinfo/UTC+1"
 
-RUN adduser -d /home/openra -m -s /sbin/nologin openra
+RUN adduser -h /home/openra -s /sbin/nologin openra
 USER openra
 WORKDIR /home/openra
 
