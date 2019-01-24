@@ -1,25 +1,7 @@
-FROM ubuntu:18.04
+FROM frolvlad/alpine-mono:5.14-glibc
 MAINTAINER Soul Inferno <gamingtiger@gmx-topmail.de>
 
 ENV TZ="/usr/share/zoneinfo/UTC+1"
-
-RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
-&& apt-get update \
-&& apt-get -y upgrade \
-&& apt-get install -y dirmngr \
-&& apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E0328081BFF6A14DA29AA6A19B38D3D831EF \
-&& echo "deb http://download.mono-project.com/repo/ubuntu stable-bionic main" > /etc/apt/sources.list.d/mono-official-stable.list \
-&& apt-get update \
-&& apt-get -y upgrade \
-&& apt-get install -y --no-install-recommends \
-wget ca-certificates rsync \
-apt-utils ca-certificates-mono mono-complete \
-locales tzdata \
-libgl1-mesa-glx \
-libopenal1 libasound2 xdg-utils zenity libsdl2-2.0-0 liblua5.1 fuse \
-&& dpkg-reconfigure --frontend noninteractive tzdata \
-&& rm -rf /var/lib/apt/lists/* \
-&& rm -rf /var/cache/apt/archives/*
 
 RUN useradd -d /home/openra -m -s /sbin/nologin openra
 USER openra
