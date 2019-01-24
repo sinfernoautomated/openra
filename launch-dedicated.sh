@@ -6,10 +6,10 @@
 #  $ Mod="d2k" ./launch-dedicated.sh # Launch a dedicated server with default settings but override the Mod
 #  Read the file to see which settings you can override
 
-Name="${Name:-"Dedicated Server 2019 playtest"}"
+Name="${Name:-"Ded. server 2019 alpine playtest"}"
 Mod="${Mod:-"ra"}"
-ListenPort="${ListenPort:-"26968"}"
-ExternalPort="${ExternalPort:-"26968"}"
+ListenPort="${ListenPort:-"26967"}"
+ExternalPort="${ExternalPort:-"26967"}"
 AdvertiseOnline="${AdvertiseOnline:-"True"}"
 EnableSingleplayer="${EnableSingleplayer:-"False"}"
 Password="${Password:-""}"
