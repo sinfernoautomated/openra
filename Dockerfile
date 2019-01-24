@@ -26,7 +26,7 @@ mkdir /home/openra/.openra/Logs && \
 mkdir /home/openra/.openra/maps && \
 chmod 755 /home/openra/usr/lib/openra/launch-dedicated.sh
 
-EXPOSE 26968
+EXPOSE 26967
 
 WORKDIR /home/openra/usr/lib/openra
 
