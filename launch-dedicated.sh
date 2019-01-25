@@ -7,7 +7,7 @@
 #  Read the file to see which settings you can override
 
 Name="${Name:-"Ded. server 2019 alpine playtest"}"
-Mod="${Mod:-"ra"}"
+# Mod="${Mod:-"ra"}"
 ListenPort="${ListenPort:-"26967"}"
 ExternalPort="${ExternalPort:-"26967"}"
 AdvertiseOnline="${AdvertiseOnline:-"True"}"
@@ -15,7 +15,7 @@ EnableSingleplayer="${EnableSingleplayer:-"False"}"
 Password="${Password:-""}"
 
 while true; do
-     mono --debug OpenRA.Server.exe Game.Mod=$Mod \
+     mono --debug OpenRA.Server.exe Game.Mod=ra \
      Server.Name="$Name" Server.ListenPort=$ListenPort Server.ExternalPort=$ExternalPort \
      Server.AdvertiseOnline=$AdvertiseOnline \
      Server.EnableSingleplayer=$EnableSingleplayer Server.Password=$Password
